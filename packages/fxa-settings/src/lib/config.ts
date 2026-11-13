@@ -132,6 +132,7 @@ export interface Config {
     passkeyPasswordlessSyncEnabled?: boolean;
     passwordlessEnabled?: boolean;
     novaDesignSystem?: boolean;
+    syncDataDeletionEnabled?: boolean;
   };
   darkMode?: {
     enabled?: boolean;

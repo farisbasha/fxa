@@ -87,6 +87,8 @@ export function mapAttachedClient(c: RawAttachedClient): AttachedClient {
   return {
     clientId: c.clientId,
     isCurrentSession: c.isCurrentSession,
+    // The auth-client type gains this field in FXA-15005.
+    isSyncCapable: (c as { isSyncCapable?: boolean }).isSyncCapable,
     userAgent: c.userAgent,
     deviceType: c.deviceType,
     deviceId: c.deviceId,
@@ -111,6 +113,8 @@ export function mapAttachedClient(c: RawAttachedClient): AttachedClient {
 export interface AttachedClient {
   clientId: string;
   isCurrentSession: boolean;
+  /** True when the device holds the Sync key (registered the send-tab command). */
+  isSyncCapable?: boolean;
   userAgent: string;
   deviceType: string | null;
   deviceId: string | null;
