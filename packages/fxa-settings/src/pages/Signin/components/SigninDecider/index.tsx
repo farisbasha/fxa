@@ -45,6 +45,7 @@ export interface SigninDeciderProps {
   flowQueryParams?: QueryParams;
   useFxAStatusResult: UseFxAStatusResult;
   isSignedIntoFirefox?: boolean;
+  hasBrowserAccount?: boolean;
   setCurrentSplitLayout?: (value: boolean) => void;
   /** Server-reported whether this account supports passwordless (OTP) signin.
    * Drives the redirect to `/signin_passwordless_code` for passwordless users
@@ -79,6 +80,7 @@ export const SigninDecider = ({
   flowQueryParams,
   useFxAStatusResult,
   isSignedIntoFirefox,
+  hasBrowserAccount,
   setCurrentSplitLayout,
   passwordlessSupported,
   skipPasswordlessRedirect,
@@ -202,6 +204,7 @@ export const SigninDecider = ({
           localizedSuccessBannerDescription,
           flowQueryParams,
           isSignedIntoFirefox,
+          hasBrowserAccount,
           setCurrentSplitLayout,
           onSessionExpired,
           supportsKeysOptionalLogin:
@@ -238,6 +241,7 @@ export const SigninDecider = ({
           localizedSuccessBannerDescription,
           flowQueryParams,
           isSignedIntoFirefox,
+          hasBrowserAccount,
           setCurrentSplitLayout,
           supportsKeysOptionalLogin:
             useFxAStatusResult.supportsKeysOptionalLogin,
@@ -266,6 +270,7 @@ export const SigninDecider = ({
         flowQueryParams,
         useFxAStatusResult,
         isSignedIntoFirefox,
+        hasBrowserAccount,
         setCurrentSplitLayout,
       }}
     />

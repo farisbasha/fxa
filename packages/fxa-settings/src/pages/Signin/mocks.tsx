@@ -401,6 +401,7 @@ export const Subject = ({
   sendUnblockEmailHandler = mockSendUnblockEmailHandler,
   finishOAuthFlowHandler = mockFinishOAuthFlowHandler,
   isSignedIntoFirefox = false,
+  hasBrowserAccount = false,
   supportsKeysOptionalLogin = false,
   passkeyEnabled = false,
   locationState,
@@ -436,6 +437,7 @@ export const Subject = ({
             avatarLoading,
             useFxAStatusResult,
             isSignedIntoFirefox,
+            hasBrowserAccount,
             ...props,
           }}
         />
