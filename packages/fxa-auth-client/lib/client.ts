@@ -3626,6 +3626,19 @@ export default class AuthClient {
   }
 
   /**
+   * Deletes all of the account's Sync data. `deleted` is false when there was
+   * nothing to delete.
+   *
+   * @param jwt - `mfa:sync_data` token for this session.
+   */
+  async destroySyncData(
+    jwt: string,
+    headers?: Headers
+  ): Promise<{ deleted: boolean }> {
+    return this.jwtPost('/account/sync_data/destroy', jwt, {}, headers);
+  }
+
+  /**
    * Fetches the wrap envelope for one passkey, so the client can unseal `kB`
    * without a password.
    *

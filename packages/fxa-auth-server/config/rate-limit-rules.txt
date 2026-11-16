@@ -226,6 +226,10 @@ passkeyWrapsGet                        : uid               : 30          : 15 mi
 passkeyWrapsDelete                     : ip_uid            : 15          : 15 minutes      : 15 minutes  : block
 passkeyWrapsDelete                     : uid               : 30          : 24 hours        : 24 hours    : block
 
+# Sync data deletion from Settings. Destructive and MFA-gated; a handful per window is plenty.
+syncDataDestroy                        : ip_uid            : 5           : 15 minutes      : 15 minutes  : block
+syncDataDestroy                        : uid               : 10          : 24 hours        : 24 hours    : block
+
 #
 # Passwordless Authentication OTP Limits
 # Controls the rate at which passwordless OTP codes can be sent and verified
