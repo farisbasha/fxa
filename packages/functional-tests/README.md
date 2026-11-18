@@ -300,7 +300,7 @@ test('My test 1', async ({
 
 ## Page Object Models (POMs)
 
-To keep the tests readable and high-level we use the [page object model](https://playwright.dev/docs/test-pom) pattern. Pages are organized by url "route" when possible in the `pages` directory, and made available to tests in the fixture as `pages`.
+To keep the tests readable and high-level we use the [page object model](https://playwright.dev/docs/pom) pattern. Pages are organized by url "route" when possible in the `pages` directory, and made available to tests in the fixture as `pages`.
 
 Example:
 
@@ -351,7 +351,7 @@ Playwright Test offers great debugging features.
 
 ### --debug option
 
-Add the `--debug` option when you run the tests an it will run with the [Playwright Inspector](https://playwright.dev/docs/inspector), letting you step through the tests and show interactions in the browser.
+Add the `--debug` option when you run the tests an it will run with the [Playwright Inspector](https://playwright.dev/docs/debug#playwright-inspector), letting you step through the tests and show interactions in the browser.
 
 ### VSCode debugging
 
